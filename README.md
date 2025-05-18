@@ -62,6 +62,12 @@ Designed using **KiCad** and manufactured by **JLCPCB**.
 
 <img src="docs/Routing.png" alt="Routing" style="max-width: 600px; width: 100%;" />
 
+### 3D Model
+
+<img src="docs/PCB_3D.png" alt="PCB 3D" style="max-width: 600px; width: 100%;" />
+
+<img src="docs/PCB_3D_No_Models.png" alt="PCB 3D no models" style="max-width: 600px; width: 100%;" />
+
 ---
 
 ## 🖨️ 3D Printed Parts
@@ -81,6 +87,8 @@ All parts were designed in **Autodesk Fusion 360** and printed using **PLA**. **
 ### 📡 Radio Receiver Case
 
 <img src="docs/RC_Case.png" alt="RC Case" style="max-width: 600px; width: 100%;" />
+
+<img src="docs/RC_Case_Open.JPG" alt="RC Case Open" style="max-width: 600px; width: 100%;" />
 
 ### 🧩 Miscellaneous Parts
 
