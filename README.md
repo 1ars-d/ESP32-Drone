@@ -24,16 +24,17 @@ The flight control software is written in **C++** using the **Arduino framework*
 
 ## 🛠️ Hardware Components
 
-| Component             | Description                                           | Price  |
-| --------------------- | ----------------------------------------------------- | ------ |
-| **Frame**             | FlyFishRC FIFTY5                                      | €50.00 |
-| **Radio Receiver**    | Flysky FS-IA6B                                        | €20.00 |
-| **Flight Controller** | ESP32-DevKitC, MP1584 (Buck Converter), MPU6050 (IMU) | €30.00 |
-| **Motors**            | 4x FlyfishRC Flash 2306 1750Kv                        | €60.00 |
-| **ESC**               | 30.5mm 4-in-1 40A BLHeli32                            | €50.00 |
-| **Battery**           | 3S 1500mAh LiPo                                       | €20.00 |
-| **Propellers**        | 4x 5.5″ Props                                         | €2.50  |
-| **3D Printed Parts**  | Material cost for FC Case, RC Case, Feet              | €2.00  |
+| Component             | Description                                                | Price   |
+| --------------------- | ---------------------------------------------------------- | ------- |
+| **Frame**             | FlyFishRC FIFTY5                                           | €50.00  |
+| **Radio Receiver**    | Flysky FS-IA6B                                             | €20.00  |
+| **Flight Controller** | ESP32-DevKitC, MP1584 (Buck Converter), MPU6050 (IMU), PCB | €20.00  |
+| **Motors**            | 4x FlyfishRC Flash 2306 1750Kv                             | €60.00  |
+| **ESC**               | 30.5mm 4-in-1 40A BLHeli32                                 | €50.00  |
+| **Battery**           | 3S 1500mAh LiPo                                            | €20.00  |
+| **Propellers**        | 4x 5.5″ Props                                              | €2.50   |
+| **3D Printed Parts**  | Material cost for FC Case, RC Case, Feet                   | €2.00   |
+| **Total**             |                                                            | 224,50€ |
 
 ---
 
