@@ -11,7 +11,7 @@
 #define IBUS_PIN 16
 
 // === CONSTANTS ===
-constexpr int LOOP_INTERVAL_US = 2500;
+constexpr int LOOP_INTERVAL_US = 4000;
 constexpr int MAX_MOTOR_OUTPUT = 2000;
 constexpr int MIN_MOTOR_IDLE = 1180;
 constexpr int MOTOR_CUTOFF = 1000;

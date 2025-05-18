@@ -1,28 +1,101 @@
 # ESP32 Custom Drone
 
-## Overview
+## 🚁 Overview
 
-A compact, custom-built 5.5″ drone based on an ESP32 microcontroller. Includes hardware design (3D prints, PCB layout) and Arduino-based firmware for flight control.
+A compact, custom-built **5.5″ quadcopter drone** powered by an **ESP32 microcontroller**. This project includes both hardware design (3D-printed components, PCB layout) and firmware (Arduino-based) for flight control.
 
-![Drone with battery](docs/DroneWithBattery.JPG)
+<img src="docs/DroneWithBattery.JPG" alt="Drone with battery" style="max-width: 600px; width: 100%;" />
 
-## Hardware
+---
 
-| Part              | Details                                               | Price  |
-| ----------------- | ----------------------------------------------------- | ------ |
-| Frame             | FlyFishRC FIFTY5                                      | 50,00€ |
-| Radio Receiver    | Flysky FS-IA6B                                        | 20,00€ |
-| Flight Controller | ESP32-DevKitC, MP1584 (Buck Converter), MPU6050 (IMU) | 30,00€ |
-| Motors            | 4x FlyfishRC Flash 2306 1750Kv                        | 60,00€ |
-| ESC               | 30.5mm 4in1 40A BLHeli32                              | 50,00€ |
-| Battery           | 3s 1500mAh LiPo                                       | 20,00€ |
-| Props             | 4x 5.5″ Props                                         | 2,50€  |
-| 3D Printed parts  | Material cost for FC Case, RC Case, Feet              | 2,00€  |
+## 🔧 Firmware
 
-## Flight Controller
+The flight control software is written in **C++** using the **Arduino framework**. It runs a **250Hz control loop** to maintain drone stability using the following key features:
 
-The flight controller (FC) is an ESP32 Dev Kit C placed on a custom PCB. The PCB has an IMU (MPU6050) and a buck converter (MP1584) soldered to it. The buck converter regulates the 10V coming from the ESC down to 5V. ESC and Radio Receiver are connected through JST SH cables to the FC.
+- **Sensor Fusion**: A **Kalman Filter** fuses gyroscope and accelerometer data to estimate orientation.
+- **Control System**: Stabilization is achieved using a **cascaded PID control loop**.
+- **Remote Input**: Directional control is handled via a **radio receiver**.
+- **Live PID Tuning**: The drone can host a **local Wi-Fi web interface** for real-time PID tuning.
+  > _The web-based tuning interface was adapted from [pratikPhadte/ESP32-Flight-controller-](https://github.com/pratikPhadte/ESP32-Flight-controller-)._
 
-## Schematic
+<img src="docs/PID_Web_Page.png" alt="PID Web Page" style="max-width: 600px; width: 100%;" />
 
-##
+---
+
+## 🛠️ Hardware Components
+
+| Component             | Description                                           | Price  |
+| --------------------- | ----------------------------------------------------- | ------ |
+| **Frame**             | FlyFishRC FIFTY5                                      | €50.00 |
+| **Radio Receiver**    | Flysky FS-IA6B                                        | €20.00 |
+| **Flight Controller** | ESP32-DevKitC, MP1584 (Buck Converter), MPU6050 (IMU) | €30.00 |
+| **Motors**            | 4x FlyfishRC Flash 2306 1750Kv                        | €60.00 |
+| **ESC**               | 30.5mm 4-in-1 40A BLHeli32                            | €50.00 |
+| **Battery**           | 3S 1500mAh LiPo                                       | €20.00 |
+| **Propellers**        | 4x 5.5″ Props                                         | €2.50  |
+| **3D Printed Parts**  | Material cost for FC Case, RC Case, Feet              | €2.00  |
+
+---
+
+## 🧠 Flight Controller
+
+The flight controller (FC) is based on an **ESP32 DevKitC**, mounted on a custom PCB. It integrates:
+
+- **MPU6050 IMU** for motion sensing
+- **MP1584 buck converter** to step down 10V (from ESC) to 5V
+
+Connections are made via **JST SH cables** to the ESC and radio receiver.
+
+<img src="docs/DroneOpenFCCase.JPG" alt="Drone with open FC case" style="max-width: 600px; width: 100%;" />
+
+---
+
+## 🧾 PCB Design
+
+Designed using **KiCad** and manufactured by **JLCPCB**.
+
+### 🔌 Schematic
+
+<img src="docs/Schematic.png" alt="Schematic" style="max-width: 600px; width: 100%;" />
+
+### 🔄 Routing
+
+<img src="docs/Routing.png" alt="Routing" style="max-width: 600px; width: 100%;" />
+
+---
+
+## 🖨️ 3D Printed Parts
+
+All parts were designed in **Autodesk Fusion 360** and printed using **PLA**. **M2/M3 threaded heat inserts** are used to mount components to the carbon frame.
+
+<img src="docs/All_3D_Printed_Parts.JPG" alt="All 3D Prints" style="max-width: 600px; width: 100%;" />
+
+### 📦 Flight Controller Case
+
+<img src="docs/FC_Case.png" alt="FC Case" style="max-width: 600px; width: 100%;" />
+<img src="docs/FC_Case_Top.png" alt="FC Top" style="max-width: 600px; width: 100%;" />
+<img src="docs/FC_Case_Bottom.png" alt="FC Bottom" style="max-width: 600px; width: 100%;" />
+<img src="docs/FC_Bottom_Screws.JPG" alt="FC Bottom Screws" style="max-width: 600px; width: 100%;" />
+<img src="docs/ESC.JPG" alt="ESC" style="max-width: 600px; width: 100%;" />
+
+### 📡 Radio Receiver Case
+
+<img src="docs/RC_Case.png" alt="RC Case" style="max-width: 600px; width: 100%;" />
+
+### 🧩 Miscellaneous Parts
+
+**Spacers**  
+<img src="docs/Spacers.JPG" alt="Spacers" style="max-width: 600px; width: 100%;" />
+
+**Feet**  
+Model from [Cults3D – FlyFishRC Volador Arm Protection](https://cults3d.com/de/modell-3d/spiel/flyfishrc-volador-5-6-full-arm-protection)  
+<img src="docs/Foot.JPG" alt="Foot" style="max-width: 600px; width: 100%;" />
+
+---
+
+## 📚 References & Inspirations
+
+This project was inspired and guided by the following open-source resources:
+
+- [CarbonAeronautics/Manual-Quadcopter-Drone](https://github.com/CarbonAeronautics/Manual-Quadcopter-Drone)
+- [pratikPhadte/ESP32-Flight-controller-](https://github.com/pratikPhadte/ESP32-Flight-controller-)
