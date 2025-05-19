@@ -36,6 +36,8 @@ The flight control software is written in **C++** using the **Arduino framework*
 | **3D Printed Parts**  | Material cost for FC Case, RC Case, Feet                   | €2.00   |
 | **Total**             |                                                            | 224,50€ |
 
+> Note: The listed prices are approximate and may vary depending on the retailer or manufacturer. In this build, we intentionally used some higher-quality (and more expensive) components to ensure that budget parts wouldn't become a limiting factor in performance. However, with careful sourcing and smart purchasing decisions, the overall cost of this drone can be significantly reduced.
+
 ---
 
 ## 🧠 Flight Controller
