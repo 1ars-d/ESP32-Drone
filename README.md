@@ -49,6 +49,8 @@ The flight controller (FC) is based on an **ESP32 DevKitC**, mounted on a custom
 
 Connections are made via **JST SH cables** to the ESC and radio receiver.
 
+> ‼️ The VCC wire of the JST SH connector for the radio receiver is connected to the ESP32’s 3.3V output. However, the receiver used in this project (FS-IA6B) requires a minimum operating voltage of 4.0V. To address this, an additional VCC wire was manually soldered to the ESP32’s 5V pin to provide sufficient power. While some 5V receivers may appear to function at 3.3V in test setups, our testing showed that the receiver's output becomes unstable when the motors are running, likely due to temporary voltage drops. For reliable performance, ensure the receiver is properly powered with a stable 5V supply.
+
 <img src="docs/DroneOpenFCCase.JPG" alt="Drone with open FC case" style="max-width: 600px; width: 100%;" />
 
 ---
