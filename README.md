@@ -109,6 +109,7 @@ Model from [Cults3D – FlyFishRC Volador Arm Protection](https://cults3d.com/de
 ## 👥 Contributors
 
 - Tilman Kurmayer (https://github.com/tchello45)
+- Melina Leitermann (https://github.com/me1ina1)
 
 ## 📚 References & Inspirations
 
